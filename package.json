@@ -1,0 +1,77 @@
+{
+  "name": "fias-shared",
+  "version": "1.0.3",
+  "description": "Shared hooks and utilities for FIAS projects",
+  "homepage": "https://github.com/fiasuz/fias-shared",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiasuz/fias-shared.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fiasuz/fias-shared/issues"
+  },
+  "contributors": [
+    {
+      "name": "FIASUZ",
+      "email": "usmonovv.az@gmail.com",
+      "url": "https://fias.uz"
+    }
+  ],
+  "keywords": [
+    "react",
+    "hooks",
+    "typescript",
+    "utilities"
+  ],
+  "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/*/index"
+      ]
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js",
+      "require": "./dist/hooks/index.cjs"
+    },
+    "./hooks/*": {
+      "types": "./dist/hooks/*/index.d.ts",
+      "import": "./dist/hooks/*/index.js",
+      "require": "./dist/hooks/*/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "clean": "rm -rf node_modules dist .turbo",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "next": ">=13"
+  }
+}

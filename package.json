@@ -1,14 +1,14 @@
 {
   "name": "fias-shared",
-  "version": "1.0.3",
+  "version": "1.0.41",
   "description": "Shared hooks and utilities for FIAS projects",
-  "homepage": "https://github.com/fiasuz/fias-shared",
+  "homepage": "https://github.com/fiasuz/shared",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fiasuz/fias-shared.git"
+    "url": "https://github.com/fiasuz/shared.git"
   },
   "bugs": {
-    "url": "https://github.com/fiasuz/fias-shared/issues"
+    "url": "https://github.com/fiasuz/shared/issues"
   },
   "contributors": [
     {
